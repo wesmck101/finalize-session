@@ -1,0 +1,6 @@
+{
+  "name": "finalize-session",
+  "version": "1.0.1",
+  "description": "End-of-session documentarian: keeps any project's CLAUDE.md, LOG.md, OPEN_ITEMS.md, incoming/ and Archive/ current so the next session starts clean.",
+  "author": { "name": "Wes McKithern" }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "finalize-session",
+  "owner": { "name": "Wes McKithern" },
+  "plugins": [
+    {
+      "name": "finalize-session",
+      "source": "./plugins/finalize-session",
+      "description": "End-of-session documentarian: keeps any project's CLAUDE.md, LOG.md, OPEN_ITEMS.md, incoming/ and Archive/ current so the next session starts clean.",
+      "version": "1.0.1"
+    }
+  ]
+}
