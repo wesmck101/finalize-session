@@ -36,4 +36,4 @@ Works in Claude Code only (desktop app Code tab, terminal, IDE). Not in claude.a
 ## Changes
 See `plugins/finalize-session/skills/finalize-session/CHANGELOG.md`. Update the version in `SKILL.md`, both manifests, `INSTALL.md` and the changelog together.
 
-Author: Wes McKithern
+Author: Wes McKithern. License: MIT (see `LICENSE`).
