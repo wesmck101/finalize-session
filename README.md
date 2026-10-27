@@ -16,8 +16,9 @@ Missing files are created after approval, with a note on what each is for. Out-o
 Works in Claude Code only (desktop app Code tab, terminal, IDE). Not in claude.ai chat.
 
 ## Install
-- **From a zip:** see `INSTALL.md`.
-- **As a plugin**, once this repo is on GitHub:
+- **Easiest:** open Claude Code and paste the message in [INSTALL.md](INSTALL.md). Claude downloads the skill from this page and installs it. The command is `/finalize-session`.
+- **From a zip:** also in `INSTALL.md`.
+- **As a plugin:**
   ```
   /plugin marketplace add wesmck101/finalize-session
   /plugin install finalize-session@finalize-session

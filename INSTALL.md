@@ -2,6 +2,7 @@ HOW TO INSTALL /finalize-session
 ================================
 
 Last updated: 2026-10-27  (skill version 1.0.1)
+Home page: https://github.com/wesmck101/finalize-session
 
 What this is
 ------------
@@ -18,12 +19,31 @@ It does NOT work in the regular claude.ai chat, because it needs to read
 and move files on your computer.
 
 
-EASIEST WAY: let Claude install it (about 1 minute)
----------------------------------------------------
+EASIEST WAY: let Claude install it from GitHub (about 1 minute)
+---------------------------------------------------------------
+1. Open Claude Code (for example the desktop app, "Code" tab).
+2. Copy and paste this message to Claude, then press Enter:
+
+   Please install the Claude Code skill from
+   https://github.com/wesmck101/finalize-session as a personal skill.
+   Download the repository and copy its folder
+   plugins/finalize-session/skills/finalize-session to
+   ~/.claude/skills/finalize-session (on Windows,
+   %USERPROFILE%\.claude\skills\finalize-session). Don't change any files
+   in it. Then confirm that ~/.claude/skills/finalize-session/SKILL.md exists.
+
+3. Approve the download and copy when Claude asks.
+4. Start a NEW session. Skills load when a session starts.
+5. Type /fin  and you should see /finalize-session in the list.
+
+Done.
+
+
+FROM A ZIP FILE (if someone sent you one)
+-----------------------------------------
 1. Double-click the zip file. A folder appears next to it, named
    finalize-session-1.0.1 (usually in Downloads).
-2. Open Claude Code (desktop app, "Code" tab).
-3. Copy and paste this message to Claude, then press Enter:
+2. Open Claude Code and paste this message:
 
    Please install the Claude Code skill in my Downloads folder at
    finalize-session-1.0.1/finalize-session as a personal skill. Copy that
@@ -33,16 +53,9 @@ EASIEST WAY: let Claude install it (about 1 minute)
 
    (If the unzipped folder isn't in Downloads, change that part of the
    message to where it is.)
-4. Approve the copy when Claude asks.
-5. Start a NEW session. Skills load when a session starts.
-6. Type /fin  and you should see /finalize-session in the list.
+3. Approve the copy, start a new session, and type /finalize-session.
 
-Done.
-
-
-MANUAL WAY (if you prefer)
---------------------------
-Mac: open Terminal and paste these two lines (assumes it's in Downloads):
+Or do it by hand. Mac: open Terminal and paste these two lines:
 
    mkdir -p ~/.claude/skills
    cp -R ~/Downloads/finalize-session-1.0.1/finalize-session ~/.claude/skills/
@@ -52,7 +65,18 @@ Windows: open PowerShell and paste these two lines:
    New-Item -ItemType Directory -Force "$env:USERPROFILE\.claude\skills"
    Copy-Item -Recurse "$env:USERPROFILE\Downloads\finalize-session-1.0.1\finalize-session" "$env:USERPROFILE\.claude\skills\"
 
-Then start a new Claude Code session and type /finalize-session.
+
+AS A PLUGIN (for people comfortable with Claude Code commands)
+--------------------------------------------------------------
+Type these two commands in Claude Code:
+
+   /plugin marketplace add wesmck101/finalize-session
+   /plugin install finalize-session@finalize-session
+
+Installed this way, the command is named /finalize-session:finalize-session
+(type /fin and pick it from the list). Get new versions with
+/plugin marketplace update finalize-session.
+Use either the personal skill or the plugin, not both.
 
 
 HOW TO USE IT
@@ -73,6 +97,12 @@ The first time, Claude may offer to create these in your project:
   incoming/      a folder where you drop files for Claude to sort
   Archive/       old notes, unused files and backups (nothing is deleted)
 It explains each one and creates nothing until you say yes.
+
+
+UPDATING
+--------
+Paste the "easiest way" message again. Claude replaces the folder with the
+newest version. Your projects' notes and backups are not touched.
 
 
 IF IT DOESN'T SHOW UP
